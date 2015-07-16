@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+//: loops and conditions
 
 import UIKit
 
@@ -122,13 +122,91 @@ default:println("other")
     
 }
 
+let mytuple=(100,200)
+switch mytuple{
+case (1,2):
+    println("values is 1,2 ")
+case (_,2000):
+    println("value is _ , 200")
+case (1000,_):
+        println("value is 100 and _")
+case (_,_):
+    println("value is _ , _")
+case (100,200):
+    println("value is 100 and 200")
+default:
+    println("default")
+}
 
 
+let tuple1=(1,2)
+switch tuple1{
+case (0,0):
+    println("case 1")
+    
+case (-2...1,-2..<2):
+    println("case 2")
+    
+case (-2...1,-2...2):
+    println("matchedd")
+case (-20...10,_):
+    println("case 3")
+
+default:
+    println("value is default")
+}
 
 
+//Value Binding
 
+let tuple2=(1,-1)
+switch tuple2{
+case let (x,y) where x==y :
+    println("case 1 is \(x) : \(y)")
+case let (x,y) where x == -y:
+        println("case 2 is \(x) : \(y)")
+case let (x,y):
+     println("case 3 is \(x) : \(y)")
+default:
+    println("default")
+}
 
+//continue
+let puzzleInput = "bhavesh padmani"
+var puzzleOutput = ""
+for character in puzzleInput {
+    switch character {
+    case "a", "e", "i", "o", "u", " ":
+        continue
+    default:
+        puzzleOutput.append(character)
+    }
+}
 
+//break 
+
+for i in 1...5 {
+    switch i{
+    case 3:
+        break
+        println("\(i) never execute")
+    default:
+        println(i)
+    }
+}
+
+// fallthrough
+
+let integerToDescribe = 5
+var description = "The number \(integerToDescribe) is"
+switch integerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+    description += " a prime number, and also"
+    fallthrough
+default:
+    description += " an integer."
+}
+println(description)
 
 
 
