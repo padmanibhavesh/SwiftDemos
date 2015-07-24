@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="ToDos" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3A-no-mRK">
+                    <rect key="frame" x="10" y="41" width="35" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Erj-gT-59I"/>
+                        <constraint firstAttribute="height" constant="20" id="GZR-zm-CQ6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEt-1s-gFB">
+                    <rect key="frame" x="10" y="86" width="88" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="un7-Jc-3c9">
+                    <rect key="frame" x="120" y="41" width="470" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXJ-ip-j0v">
+                    <rect key="frame" x="120" y="86" width="470" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9JQ-fx-2rj">
+                    <rect key="frame" x="71" y="132" width="519" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="459428668.77761799">
+                        <!--2015-07-24 11:04:28 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfK-xo-1M7">
+                    <rect key="frame" x="236" y="319" width="129" height="30"/>
+                    <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Edit">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="editData" destination="-1" eventType="touchUpInside" id="SkI-du-kIA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-KD-rpI">
+                    <rect key="frame" x="10" y="132" width="36" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TIc-KD-rpI" firstAttribute="top" secondItem="GEt-1s-gFB" secondAttribute="bottom" constant="25" id="0O1-cS-Nph"/>
+                <constraint firstItem="un7-Jc-3c9" firstAttribute="leading" secondItem="p3A-no-mRK" secondAttribute="trailing" constant="75" id="0Z3-YD-8Gs"/>
+                <constraint firstItem="9JQ-fx-2rj" firstAttribute="top" secondItem="TIc-KD-rpI" secondAttribute="top" id="1d2-Ct-TgS"/>
+                <constraint firstItem="un7-Jc-3c9" firstAttribute="leading" secondItem="RXJ-ip-j0v" secondAttribute="leading" id="DdO-iN-RBG"/>
+                <constraint firstItem="p3A-no-mRK" firstAttribute="leading" secondItem="GEt-1s-gFB" secondAttribute="leading" id="DxR-W0-JVB"/>
+                <constraint firstItem="un7-Jc-3c9" firstAttribute="trailing" secondItem="RXJ-ip-j0v" secondAttribute="trailing" id="Gf1-Wm-wnE"/>
+                <constraint firstAttribute="trailing" secondItem="un7-Jc-3c9" secondAttribute="trailing" constant="10" id="HVq-ku-E9r"/>
+                <constraint firstItem="GEt-1s-gFB" firstAttribute="top" secondItem="RXJ-ip-j0v" secondAttribute="top" id="Lq9-j4-mFy"/>
+                <constraint firstItem="RXJ-ip-j0v" firstAttribute="trailing" secondItem="9JQ-fx-2rj" secondAttribute="trailing" id="TbT-BY-Cts"/>
+                <constraint firstItem="9JQ-fx-2rj" firstAttribute="leading" secondItem="TIc-KD-rpI" secondAttribute="trailing" constant="25" id="X7P-ZY-SVy"/>
+                <constraint firstAttribute="centerX" secondItem="gfK-xo-1M7" secondAttribute="centerX" id="Zar-eg-OQp"/>
+                <constraint firstItem="un7-Jc-3c9" firstAttribute="top" secondItem="p3A-no-mRK" secondAttribute="top" id="Zk4-T1-ua9"/>
+                <constraint firstItem="gfK-xo-1M7" firstAttribute="top" secondItem="9JQ-fx-2rj" secondAttribute="bottom" constant="25" id="coE-BO-j9x"/>
+                <constraint firstItem="GEt-1s-gFB" firstAttribute="leading" secondItem="TIc-KD-rpI" secondAttribute="leading" id="hHp-dP-G85"/>
+                <constraint firstItem="p3A-no-mRK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="sMe-6q-ce3"/>
+                <constraint firstItem="p3A-no-mRK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="41" id="sXR-1F-clC"/>
+                <constraint firstItem="gfK-xo-1M7" firstAttribute="width" secondItem="9JQ-fx-2rj" secondAttribute="width" multiplier="1:4" id="uYJ-JK-azT"/>
+                <constraint firstItem="GEt-1s-gFB" firstAttribute="top" secondItem="p3A-no-mRK" secondAttribute="bottom" constant="25" id="wCR-uS-McA"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
