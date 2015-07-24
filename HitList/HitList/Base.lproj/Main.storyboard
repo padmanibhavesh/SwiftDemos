@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V6n-Gm-JaC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HitList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yZE-mJ-cCj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XMU-Mb-WNU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5wX-h6-dzn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yZE-mJ-cCj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0Kt-dU-CzY">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-64"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="yZE-mJ-cCj" secondAttribute="trailing" id="UA8-Ea-w3x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yZE-mJ-cCj" secondAttribute="bottom" id="kLU-Z3-521"/>
+                            <constraint firstItem="yZE-mJ-cCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vn8-z1-Ufo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yZE-mJ-cCj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Kt-dU-CzY"/>
+                                <exclude reference="UA8-Ea-w3x"/>
+                                <exclude reference="vn8-z1-Ufo"/>
+                                <exclude reference="kLU-Z3-521"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yZE-mJ-cCj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Kt-dU-CzY"/>
+                                <include reference="UA8-Ea-w3x"/>
+                                <include reference="vn8-z1-Ufo"/>
+                                <include reference="kLU-Z3-521"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="3yb-UF-7At">
+                        <barButtonItem key="rightBarButtonItem" title="ADD" id="61c-y6-9dl">
+                            <connections>
+                                <action selector="addName:" destination="BYZ-38-t0r" id="N6I-Cj-RsZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="yZE-mJ-cCj" id="UCx-39-5Vb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="304.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="da8-wE-0BK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V6n-Gm-JaC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="drN-rL-iWF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kpm-y1-PrY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72c-cz-n8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97.5" y="950.25"/>
+        </scene>
+    </scenes>
+</document>
