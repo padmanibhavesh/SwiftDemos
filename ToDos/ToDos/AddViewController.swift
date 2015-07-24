@@ -10,6 +10,12 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    
+    @IBOutlet var itemTitle: UITextField?
+    @IBOutlet var itemDescription: UITextField?
+    @IBOutlet var currentDate: UITextField?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
