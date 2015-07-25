@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18E5CEA31B6342AD003818D9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5CEA11B6342AD003818D9 /* TableViewCell.swift */; };
+		18E5CEA41B6342AD003818D9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E5CEA21B6342AD003818D9 /* TableViewCell.xib */; };
 		18F49FDA1B623B150009706F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F49FD91B623B150009706F /* AppDelegate.swift */; };
 		18F49FDD1B623B150009706F /* ToDos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F49FDB1B623B150009706F /* ToDos.xcdatamodeld */; };
 		18F49FE41B623B150009706F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F49FE31B623B150009706F /* Images.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18E5CEA11B6342AD003818D9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		18E5CEA21B6342AD003818D9 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		18F49FD41B623B150009706F /* ToDos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F49FD81B623B150009706F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18F49FD91B623B150009706F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				18F49FD91B623B150009706F /* AppDelegate.swift */,
+				18E5CEA11B6342AD003818D9 /* TableViewCell.swift */,
+				18E5CEA21B6342AD003818D9 /* TableViewCell.xib */,
 				18F4A0041B6244E70009706F /* EditViewController.swift */,
 				18F4A0051B6244E70009706F /* EditViewController.xib */,
 				18F4A0001B6244CA0009706F /* AddViewController.swift */,
@@ -208,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F49FE71B623B150009706F /* LaunchScreen.xib in Resources */,
+				18E5CEA41B6342AD003818D9 /* TableViewCell.xib in Resources */,
 				18F49FFF1B623FC80009706F /* MainViewController.xib in Resources */,
 				18F4A0071B6244E70009706F /* EditViewController.xib in Resources */,
 				18F4A0031B6244CA0009706F /* AddViewController.xib in Resources */,
@@ -232,6 +239,7 @@
 				18F4A0061B6244E70009706F /* EditViewController.swift in Sources */,
 				18F49FFE1B623FC80009706F /* MainViewController.swift in Sources */,
 				18F49FDA1B623B150009706F /* AppDelegate.swift in Sources */,
+				18E5CEA31B6342AD003818D9 /* TableViewCell.swift in Sources */,
 				18F4A0021B6244CA0009706F /* AddViewController.swift in Sources */,
 				18F49FDD1B623B150009706F /* ToDos.xcdatamodeld in Sources */,
 			);
@@ -419,6 +427,7 @@
 				18F49FF81B623B150009706F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18F49FF91B623B150009706F /* Build configuration list for PBXNativeTarget "ToDosTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +436,7 @@
 				18F49FFB1B623B150009706F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

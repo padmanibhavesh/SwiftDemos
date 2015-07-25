@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="ToDos" customModuleProvider="target">
             <connections>
+                <outlet property="currentDate" destination="pOW-mX-uDN" id="ofk-v0-mw7"/>
+                <outlet property="itemDescription" destination="5fr-U7-qx0" id="UfR-BV-318"/>
+                <outlet property="itemTitle" destination="k9d-JT-nSZ" id="z01-a6-DhM"/>
+                <outlet property="location" destination="AP5-rs-pWX" id="VlC-ZU-DhV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,6 +32,9 @@
                     <rect key="frame" x="112" y="60" width="478" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="rPK-Uv-qwA"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXR-43-PbP">
                     <rect key="frame" x="10" y="109" width="99" height="21"/>
@@ -59,6 +66,9 @@
                     <rect key="frame" x="112" y="105" width="478" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="onF-tR-DTO"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-g3-cSg">
                     <rect key="frame" x="255" y="391" width="90" height="30"/>
@@ -85,6 +95,9 @@
                     <rect key="frame" x="112" y="155" width="478" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="vqq-hq-kCB"/>
+                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
