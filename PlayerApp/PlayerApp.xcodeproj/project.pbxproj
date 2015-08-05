@@ -10,6 +10,8 @@
 		1800805E1B69E6A000BFEC36 /* AVPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800805C1B69E6A000BFEC36 /* AVPlayerController.swift */; };
 		180080601B69E6A000BFEC36 /* AVPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800805D1B69E6A000BFEC36 /* AVPlayerController.xib */; };
 		180080671B69EC5500BFEC36 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180080661B69EC5500BFEC36 /* TestViewController.swift */; };
+		1814CDD81B71F6C500A14147 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814CDD61B71F6C500A14147 /* ShareViewController.swift */; };
+		1814CDD91B71F6C500A14147 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1814CDD71B71F6C500A14147 /* ShareViewController.xib */; };
 		1835E8FD1B6FADE700257724 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1835E8FC1B6FADE700257724 /* AVFoundation.framework */; };
 		187384911B6F96B3005B1A7D /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873848F1B6F96B3005B1A7D /* PlayViewController.swift */; };
 		187384921B6F96B3005B1A7D /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187384901B6F96B3005B1A7D /* PlayViewController.xib */; };
@@ -33,6 +35,8 @@
 		1800805C1B69E6A000BFEC36 /* AVPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerController.swift; sourceTree = "<group>"; };
 		1800805D1B69E6A000BFEC36 /* AVPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVPlayerController.xib; sourceTree = "<group>"; };
 		180080661B69EC5500BFEC36 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		1814CDD61B71F6C500A14147 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1814CDD71B71F6C500A14147 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		1835E8FC1B6FADE700257724 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1873848F1B6F96B3005B1A7D /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		187384901B6F96B3005B1A7D /* PlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				18E491CF1B6B4AC0008D9E66 /* JsonViewController.xib */,
 				1873848F1B6F96B3005B1A7D /* PlayViewController.swift */,
 				187384901B6F96B3005B1A7D /* PlayViewController.xib */,
+				1814CDD61B71F6C500A14147 /* ShareViewController.swift */,
+				1814CDD71B71F6C500A14147 /* ShareViewController.xib */,
 			);
 			path = TestViewController;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1814CDD91B71F6C500A14147 /* ShareViewController.xib in Resources */,
 				18E491D21B6B4AC0008D9E66 /* JsonViewController.xib in Resources */,
 				180080601B69E6A000BFEC36 /* AVPlayerController.xib in Resources */,
 				187384921B6F96B3005B1A7D /* PlayViewController.xib in Resources */,
@@ -247,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E491CA1B6B3DEA008D9E66 /* MusicTestViewController.swift in Sources */,
+				1814CDD81B71F6C500A14147 /* ShareViewController.swift in Sources */,
 				18E2D9F71B6891F90069E84A /* PlayerApp.xcdatamodeld in Sources */,
 				18E491D01B6B4AC0008D9E66 /* JsonViewController.swift in Sources */,
 				18C305B91B69FC9500E2C2C9 /* ScanViewController.swift in Sources */,

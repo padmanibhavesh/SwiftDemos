@@ -14,11 +14,11 @@ class SongListViewController: UIViewController,UITableViewDataSource,UITableView
     
     @IBOutlet var tableView : UITableView!
     
-    var songTitle:[String] = []
-    var songAlbum:[String] = []
-    var songURL:[NSURL] = []
-    var songArtWork:[MPMediaItemArtwork] = []
-    var songImg:[UIImage] = []
+    var arrSongTitle:[String] = []
+   // var arrSongAlbum:[String] = []
+    var arrSongURL:[NSURL] = []
+    var arrSongArtWork:[MPMediaItemArtwork] = []
+    var arrSongImg:[UIImage] = []
     
     
     override func viewDidLoad() {
@@ -37,28 +37,26 @@ class SongListViewController: UIViewController,UITableViewDataSource,UITableView
         var predicate = MPMediaPropertyPredicate(value: MPMediaType.AnyVideo.rawValue, forProperty: MPMediaItemPropertyMediaType)
         query.addFilterPredicate(predicate)
         
-               var flag = 0
-       
+        var flag = 0
         for (flag = 0; flag < query.items.count; flag++ ){
             
             var item: AnyObject = query.items[flag]
             
-            var title:String!  = item.valueForProperty(MPMediaItemPropertyTitle) as! String
-            var url: NSURL! = item.valueForProperty(MPMediaItemPropertyAssetURL) as! NSURL
-            var artwork:MPMediaItemArtwork! = item.valueForProperty(MPMediaItemPropertyArtwork) as! MPMediaItemArtwork
-            var image = artwork.imageWithSize(CGSize(width: 80, height: 80))
+            var songTitle:String!  = item.valueForProperty(MPMediaItemPropertyTitle) as! String
+            var songUrl: NSURL! = item.valueForProperty(MPMediaItemPropertyAssetURL) as! NSURL
+            var songArtwork:MPMediaItemArtwork! = item.valueForProperty(MPMediaItemPropertyArtwork) as! MPMediaItemArtwork
+            var songImage = songArtwork.imageWithSize(CGSize(width: 80, height: 80))
             
-            songTitle.append(title)
-            songURL.append(url)
-            songArtWork.append(artwork)
-            songImg.append(image)
-            
-            
+            arrSongTitle.append(songTitle)
+            arrSongURL.append(songUrl)
+            arrSongArtWork.append(songArtwork)
+            arrSongImg.append(songImage)
         }
-        println(songTitle.count)
-        println(songURL.count)
-        println(songArtWork.count)
-        println(songImg.count)
+        
+        /*println(arrSongTitle.count)
+        println(arrSongURL.count)
+        println(arrSongArtWork.count)
+        println(arrSongImg.count)*/
    
         
     }
@@ -71,16 +69,15 @@ class SongListViewController: UIViewController,UITableViewDataSource,UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songTitle.count
-       // return 10
+        return arrSongTitle.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let customCell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! TableViewCell
         
-        customCell.lblSongTitle.text = songTitle[indexPath.row] as String
-        customCell.songImgView.image = songImg[indexPath.row]as UIImage
+        customCell.lblSongTitle.text = arrSongTitle[indexPath.row] as String
+        customCell.songImgView.image = arrSongImg[indexPath.row]as UIImage
         
         customCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return customCell
@@ -89,11 +86,12 @@ class SongListViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var songViewController = AVPlayerController(nibName: "AVPlayerController",bundle:nil)
         
-        songViewController.urlString = "\(self.songURL[indexPath.row])"
-        songViewController.index = indexPath.row
-        //songViewController.song_title.text = "\(self.songTitle[indexPath.row])"
-        songViewController.songURL = self.songURL
-        songViewController.songTitle = self.songTitle
+        songViewController.itemIndex = indexPath.row
+        songViewController.urlString = "\(self.arrSongURL[indexPath.row])"
+        songViewController.arrSongURL = self.arrSongURL
+        songViewController.arrSongTitle = self.arrSongTitle
+        songViewController.arrSongImg = self.arrSongImg
+        
         self.navigationController?.pushViewController(songViewController, animated: true)
     }
 }
