@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Social
+import MediaPlayer
 
 class AVPlayerController: UIViewController {
 
@@ -23,6 +24,7 @@ class AVPlayerController: UIViewController {
     @IBOutlet var btnPlay:UIButton!
     @IBOutlet var uiSlider:UISlider!
     @IBOutlet var song_title:UILabel!
+    @IBOutlet var volume: MPVolumeView!
     
     @IBOutlet weak var lblCurrentTime: UILabel!
     @IBOutlet weak var lblTotalTime: UILabel!
